@@ -18,3 +18,7 @@ never runs again. Non-interactive for scripting and CI:
 
 BSD-3-Clause. Part of the Konneal engine ecosystem
 (github.com/konneal).
+
+## The site plane
+
+`--with-site` scaffolds `site/` — a minimal Astro+Vue frontend whose entire answer-contract surface (SSE client, markdown renderer, citation chips, typed blocks) comes from `@konneal/client`. What remains is the publisher's own: theme tokens in `src/styles/global.css`, page chrome in `src/pages/index.astro`, and conversation state in `src/components/Chat.vue`. Build with `npm run build` in `site/`; the worker serves `site/dist` as its assets.

@@ -100,6 +100,16 @@ const render = (tplFile) =>
   });
 
 const files = {
+  // the optional site plane (fold of ui-starter): --with-site writes it
+  ...(flags["with-site"] ? {
+    "site/package.json": "site/package.json",
+    "site/astro.config.mjs": "site/astro.config.mjs",
+    "site/tsconfig.json": "site/tsconfig.json",
+    "site/src/pages/index.astro": "site/src/pages/index.astro",
+    "site/src/components/Chat.vue": "site/src/components/Chat.vue",
+    "site/src/styles/global.css": "site/src/styles/global.css",
+    "site/src/styles/chat.css": "site/src/styles/chat.css",
+  } : {}),
   "profile/publisher.yaml": "profile/publisher.yaml",
   "profile/datasets.yaml": "profile/datasets.yaml",
   "profile/corpora.yaml": "profile/corpora.yaml",
