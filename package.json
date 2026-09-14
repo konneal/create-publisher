@@ -1,0 +1,11 @@
+{
+  "name": "@konneal/create-publisher",
+  "version": "0.1.0",
+  "description": "Scaffold a Konneal publisher deployment: npm create @konneal/publisher my-sdo",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "bin": { "create-publisher": "index.js" },
+  "files": ["index.js", "templates", "LICENSE", "README.md"],
+  "repository": "github:konneal/create-publisher",
+  "engines": { "node": ">=20" }
+}

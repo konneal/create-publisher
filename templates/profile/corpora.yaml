@@ -1,0 +1,10 @@
+# The corpus registry — the vector adapter's single door consults this
+# table. class: production corpora are legal in the production index;
+# lane corpora only in their comparison index.
+production: [{{ID}}]
+lanes: {}
+corpora:
+  {{ID}}: { repo: YOUR_CORPUS_REPO, note: the publisher's corpus }
+bibliography: {}
+terminology: {}
+models: {}

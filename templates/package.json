@@ -1,0 +1,20 @@
+{
+  "name": "{{ID}}-konneal",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "gen:profile": "node scripts/gen_profile.mjs",
+    "typecheck": "tsc -p workers/worker_public",
+    "dev": "npm run gen:profile && wrangler dev -c workers/worker_public/wrangler.toml",
+    "deploy": "npm run gen:profile && wrangler deploy -c workers/worker_public/wrangler.toml"
+  },
+  "dependencies": {
+    "yaml": "^2.8.0",
+    "@konneal/engine": "^0.1.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.0.0",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.0.0"
+  }
+}

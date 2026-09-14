@@ -1,0 +1,7 @@
+# The site's declared data surface
+suggestions:
+  - What publications does {{NAME}} issue?
+models_disclosure:
+  - { role: Answers, model: declared-at-deploy }
+smoke:
+  - { label: sanity, query: What publications does {{NAME}} issue?, expect: "{{NAME}}" }

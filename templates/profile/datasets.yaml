@@ -1,0 +1,10 @@
+# Datasets the user can scope an answer to. Each names the corpora it
+# spans; `session: true` gates it behind a signed-in permission.
+datasets:
+  - id: {{DATASET}}
+    label: {{NAME}} Publications
+    description: The publisher's public corpus
+    corpora: [{{ID}}]
+    note: >-
+      Some passages come from the {{NAME}} corpus — cite them the same
+      way as every other passage.

@@ -1,0 +1,28 @@
+name = "{{ID}}-public"
+main = "src/index.ts"
+compatibility_date = "2026-09-01"
+
+# Bindings are infrastructure facts, filled at bootstrap (see README).
+# The engine reaches every one through its ports (ports/cloudflare);
+# nothing in your code touches a binding type.
+[vars]
+INDEX_VERSION = "{{ID}}-v0.1"
+
+[[vectorize]]
+binding = "VECTORIZE"
+index_name = "idx_{{ID}}_public"
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "FILL_AT_BOOTSTRAP"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "{{ID}}-public"
+database_id = "FILL_AT_BOOTSTRAP"
+
+[ai]
+binding = "AI"
+
+[assets]
+directory = "../../site/dist"

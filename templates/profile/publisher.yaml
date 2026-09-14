@@ -1,0 +1,23 @@
+# The publisher profile — the single place this publisher's identity
+# lives. The engine consumes it (codegenerated into
+# workers/worker_public/src/profile.gen.ts by scripts/gen_profile.mjs);
+# nothing under workers/ may hardcode a publisher fact.
+id: {{ID}}
+name: {{NAME}}
+full_name: {{FULL_NAME}}
+product_name: {{PRODUCT}}
+description: >-
+  Retrieval-augmented answering over {{NAME}} publications, cited to
+  the clause.
+domains:
+  public: {{DOMAIN}}
+  origin_suffix: {{ORIGIN_SUFFIX}}
+identity:
+  issuer: {{ISSUER}}
+# the identifier grammar: plain-slug (generic) or oiml-pubid
+codec: plain-slug
+session_cookie: {{ID}}-session
+# engine features this deployment switches on (default: off)
+features:
+  drafts: false
+  model_plane: false

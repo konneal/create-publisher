@@ -1,0 +1,7 @@
+# The publisher's prompt voice — the template slots the engine's
+# prompts interpolate.
+vars:
+  assistant_identity: >-
+    {{IDENTITY}}
+  refusal_sentence: {{REFUSAL}}
+  account_note_source: the user's own {{PRODUCT}} account
