@@ -1,0 +1,30 @@
+---
+import Chat from "../components/Chat.vue";
+import "../styles/global.css";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{PRODUCT}}</title>
+  </head>
+  <body>
+    <header class="bar">
+      <strong>{{PRODUCT}}</strong>
+      <span class="credit">served by Konneal</span>
+    </header>
+    <main class="frame">
+      <Chat publisher-name="{{NAME}}" :suggestions="['What publications does {{NAME}} issue?']" client:load />
+    </main>
+  </body>
+</html>
+
+<style>
+  .bar {
+    display: flex; align-items: baseline; gap: 0.75rem;
+    padding: 0.75rem 1.25rem; border-bottom: 1px solid var(--rule);
+  }
+  .credit { color: var(--ink-muted); font-size: 0.8rem; margin-left: auto; }
+  .frame { height: calc(100dvh - 3.2rem); }
+</style>

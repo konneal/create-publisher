@@ -1,0 +1,16 @@
+/* Theme tokens — the publisher's brand. The contract styles
+   (@konneal/client/styles.css) read these. */
+:root {
+  --paper: #ffffff;
+  --paper-deep: #f3f4f6;
+  --ink: #16181d;
+  --ink-soft: #3d4350;
+  --ink-muted: #6b7280;
+  --rule: #d9dde3;
+  --accent: #1d4ed8;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+@import "@konneal/client/styles.css";
+
+html, body { margin: 0; height: 100%; }
+body { background: var(--paper); color: var(--ink); font-family: system-ui, sans-serif; }
