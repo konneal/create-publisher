@@ -3,3 +3,8 @@ corpora: {}
 bibliography: {}
 terminology: {}
 models: {}
+
+# Licensed standards (optional): each entry is { key, package,
+# doc_number, title, edition } - the fail-closed whitelist an entitled
+# request may carry. Empty = public content only; the scope stays inert.
+licensed: []
