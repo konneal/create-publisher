@@ -24,5 +24,14 @@ database_id = "FILL_AT_BOOTSTRAP"
 [ai]
 binding = "AI"
 
+# Sign-in through the estate identity service (optional — delete when
+# the deployment serves anonymously). The engine ships the whole RP:
+# PKCE sign-in, the session cookie, and renewal through the OP's
+# refresh grant (offline_access — sessions re-judge live standing, so
+# deactivation ends access at the next page load).
+# OIDC_ISSUER = "https://id.oimlsmart.org"
+# OIDC_CLIENT_ID = "<your registered client id>"
+# OIDC_REDIRECT_URI = "https://<your host>/auth/callback"
+
 [assets]
 directory = "../../site/dist"
